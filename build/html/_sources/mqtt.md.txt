@@ -155,6 +155,7 @@ topic : `exchange.public.spot.ticker`
 	}
 ]
 ```
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | changeRange | string | 否 |涨跌幅 |
@@ -280,6 +281,7 @@ topic : `exchange.public.contract.ticker`
 	}
 ]
 ```
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | changeRange | string | 否 |涨跌幅 |
@@ -307,6 +309,7 @@ topic : `exchange.public.contract.position`
 	"ethusdt": "1271"
 }
 ```
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | {contractCode} | string | 否 |合约的仓位总和 |
@@ -612,6 +615,7 @@ depth :`深度`
 | sell | array | 否 |卖盘 |
 
 buy||sell
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | amount | string | 否 |数量 |
@@ -1644,6 +1648,7 @@ topic : `exchange.public.contract `
 | data      | array        | 不可空   | 最新成交列表           |
 
 data
+
 | 参数名    | 参数类型    | 是否可空 | 描述               |
 | --------- | ----------- | -------- | ------------------ |
 | dealAmount    | String         | 不可空   | 成交数量            |
@@ -1694,6 +1699,7 @@ data
 	"data":[["1636428360", "67569.77", "67576.6", "67569.77", "67576.6", "25", "11.00", 10]]
 }
 ```
+
 | 参数名    | 参数类型    | 是否可空 | 描述               |
 | --------- | ----------- | -------- | ------------------ |
 | action    | int         | 不可空   | -                  |
@@ -1770,6 +1776,7 @@ data
 | data      | array        | 不可空   | 最新成交列表           |
 
 data
+
 | 参数名    | 参数类型    | 是否可空 | 描述               |
 | --------- | ----------- | -------- | ------------------ |
 | dealAmount    | String         | 不可空   | 成交数量            |
@@ -1837,6 +1844,7 @@ data
 }
 ```
 data
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | btc  | string | 否 | BTC资产 |
@@ -1931,6 +1939,7 @@ data
 | contactCode:positionType  | object | 否 |合约编号：仓位类型（short(空头)、long(多头)） |
 
 contactCode:positionType
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | amount  | String | 否 |持仓总价值（包含委托价值） |
@@ -2051,6 +2060,7 @@ contactCode:positionType
 
 data
 当action为ADD
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | averagePrice  | string | 否 | 平均价 |
@@ -2077,6 +2087,7 @@ data
 | trades  | list | 否 | 金额 |
 
 当action为UPDATE
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | dealPrice | string | 否 |成交价 |
@@ -2087,6 +2098,7 @@ data
 | timestamp | string | 否 |成交时间戳 |
 
 当actiong为DELETE
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | averagePrice  | string | 否 | 平均价 |
@@ -2113,6 +2125,7 @@ data
 | trades  | list | 否 | 金额 |
 
 trades
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | buyOrderFullDeal  | boolean | 否 | 买单是否完全成交 |
@@ -2275,6 +2288,7 @@ trades
 ```
 
 当action 为 change-margin、change-leverage、change-mode 时
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | action | string | 否 |操作类型：change-mode(切换仓位)、change-leverage(切换杠杆)、change-margin(修改保证金) |
@@ -2296,6 +2310,7 @@ trades
 
 data
 当data中的action为ADD
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | averagePrice  | string | 否 | 平均价 |
@@ -2322,6 +2337,7 @@ data
 | trades  | list | 否 | 金额 |
 
 当data中的action为UPDATE
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | dealPrice | string | 否 |成交价 |
@@ -2332,6 +2348,7 @@ data
 | timestamp | string | 否 |成交时间戳 |
 
 当data中的action为DELETE
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | averagePrice  | string | 否 | 平均价 |
@@ -2358,6 +2375,7 @@ data
 | trades  | list | 否 | 金额 |
 
 trades
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | buyOrderFullDeal  | boolean | 否 | 买单是否完全成交 |

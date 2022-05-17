@@ -29,6 +29,7 @@
 
 
 ### HTTP STATUS CODE
+
 |  status code   | 介绍|
 |  ----   |----  |
 | 200  | 一般代表请求处理成功 |
@@ -120,6 +121,7 @@
 | secretKey | NhqPtmdSJYdKjVHjA7PZj4Mge3R5YNiP1e3UZjInClVN65XAbvqqM6A7H5fATj1j |
 
 HEADERS
+
 | 参数        | 取值           |
 | :---------- | :------------ |
 | RecvWindow  | 5000          |
@@ -547,6 +549,7 @@ GET /v1/exchange/market/spot/areas
 | tradePairMarkets  | array | 是 | 交易区内交易对列表 |
 
 tradePairMarkets
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | symbol  | string | 否 | 交易对编号 |
@@ -669,6 +672,7 @@ GET /v1/exchange/spot/trades/{symbol}/{limit}
 ```
 GET /v1/exchange/spot/kline/{symbol}/{klineTime}/{timestamp}/{count}
 ```
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | arr[0] | string | 否 |时间戳 |
@@ -770,6 +774,7 @@ GET /v1/exchange/spot/kline/{symbol}/{klineTime}/{timestamp}/{count}
 | accounts  | array | 是 | 所有币种账户 |
 
 accounts
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | btc  | string | 否 | BTC资产 |
@@ -820,6 +825,7 @@ accounts
 | supportChains  | array | 否 | 支持的链 |
 
 supportChains
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | currency  | string | 否 | 支持的链 |
@@ -952,6 +958,7 @@ POST /v1/exchange/spot/order (HMAC SHA256)
 | trades  | list | 否 | 成交列表 |
 
 trades
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | buyOrderFullDeal  | boolean | 否 | 买单是否完全成交 |
@@ -1126,6 +1133,7 @@ trades
 | trades  | list | 否 | 成交列表 |
 
 trades
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | buyOrderFullDeal  | boolean | 否 | 买单是否完全成交 |
@@ -1675,6 +1683,7 @@ GET /v1/exchange/spot/entrust/{orderNo} (HMAC SHA256)
 | list  | array | 否 | 记录列表 |
 
 list
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | averagePrice  | string | 否 | 平均价 |
@@ -1701,6 +1710,7 @@ list
 | trades  | list | 否 | 成交列表 |
 
 trades
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | buyOrderFullDeal  | boolean | 否 | 买单是否完全成交 |
@@ -1747,6 +1757,7 @@ BODY
 	"entrustType":"B"
 }
 ```
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | symbol  | string | 是 | 交易对编号 |
@@ -1847,12 +1858,14 @@ BODY
 	"total": "3"
 }
 ```
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | total  | string | 否 | 总数 |
 | list  | array | 否 | 记录列表 |
 
 list
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | buyOrderFullDeal  | boolean | 否 | 买单是否完全成交 |
@@ -1902,6 +1915,7 @@ BODY
 	"endTime":1637510400
 }
 ```
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | symbol  | string | 是 | 交易对编号 |
@@ -2264,6 +2278,7 @@ BODY
 | contractInfos  | array | 是 | 基础币种内合约列表 |
 
 contractInfos
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | contractCode  | string | 否 | 合约编号 |
@@ -2295,6 +2310,7 @@ contractInfos
 | remainTime  | string | 是 | 合约剩余交割时间（单位:秒）|
 
 tradePairs
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | symbol  | string | 否 | 交易对编号 |
@@ -2311,6 +2327,7 @@ tradePairs
 | tradeMarket  | array | 是 | 交易市场编号： spot（现货）、contract(合约)、otc（场外）|
 
 marketMethod
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | type  | string | 否 | 价格计算方法:1(合理价格标记) |
@@ -2358,6 +2375,7 @@ GET /v1/exchange/contract/online
 	"tradeMarket": "contract"
 }
 ```
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | amount | string | 否 |数量 |
@@ -2435,6 +2453,7 @@ GET /v1/exchange/contract/trades/{contractCode}/{limit}
 ```
 GET /v1/exchange/contract/kline/{contractCode}/{klineTime}/{timestamp}/{count}
 ```
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | arr[0] | string | 否 |时间戳 |
@@ -2537,6 +2556,7 @@ GET /v1/exchange/contract/kline/{contractCode}/{klineTime}/{timestamp}/{count}
 | accounts  | array | 是 | 所有币种账户 |
 
 accounts
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | btc  | string | 否 | BTC资产 |
@@ -2651,6 +2671,7 @@ POST /v1/exchange/contract/order/test (HMAC SHA256)
 | trades  | list | 否 | 成交列表 |
 
 trades
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | buyOrderFullDeal  | boolean | 否 | 买单是否完全成交 |
@@ -2955,6 +2976,7 @@ GET /v1/exchange/contract/entrust/{orderNo} (HMAC SHA256)
 	"total": "27"
 }
 ```
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | total  | string | 否 | 总数 |
@@ -2989,6 +3011,7 @@ list
 | trades  | list | 否 | 成交列表 |
 
 trades
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | buyOrderFullDeal  | boolean | 否 | 买单是否完全成交 |
@@ -3035,6 +3058,7 @@ BODY
 	"entrustType":"B"
 }
 ```
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | contractCode  | string | 是 | 合约编号 |
@@ -3111,6 +3135,7 @@ BODY
 	"total": "27"
 }
 ```
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | total  | string | 否 | 总数 |
@@ -3145,6 +3170,7 @@ list
 | trades  | list | 否 | 成交列表 |
 
 trades
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | buyOrderFullDeal  | boolean | 否 | 买单是否完全成交 |
@@ -3192,6 +3218,7 @@ BODY
 	"endTime":1637510400
 }
 ```
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | contractCode  | string | 是 | 合约编号 |
@@ -3317,11 +3344,13 @@ BODY
 | data  | map | 否 |持仓数据 |
 
 data
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | contactCode:positionType  | object | 否 |合约编号：仓位类型（short(空头)、long(多头)） |
 
 contactCode:positionType
+
 |  参数名   | 参数类型  |可空|介绍|
 |  ----  | ----  |----  |----  |
 | amount  | String | 否 |持仓总价值（包含委托价值） |
